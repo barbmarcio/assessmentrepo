@@ -5,11 +5,7 @@ const employeesRouter = Router();
 const employeeController = new EmployeeController();
 
 // Get all employees
-employeesRouter.get('/', employeeController.index, () => {
-  return Promise.reject().catch(err => {
-    throw new Error(err);
-  });
-});
+employeesRouter.get('/', employeeController.index);
 
 // Get employee by id
 employeesRouter.get('/:id', employeeController.show);
