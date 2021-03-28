@@ -11,7 +11,6 @@ Some informations:
 - Developed in Node.js
 - My chosen database was 'postgres', using docker as a container;
 - My chosen ORM was TypeORM, so you can assume that I used TypeScript in the whole project;
-- The HTML part of the code is simply the Jest coverage 
 - I tried to follow at max the SOLID principles and tried to not break any contracts;
 - The assessment doesn't ask for, but I implemented Jest tests (TDD) in 100% of the project methods;
 - I had created a new field inside "Employees" so I could verify if that employee is already registered;
