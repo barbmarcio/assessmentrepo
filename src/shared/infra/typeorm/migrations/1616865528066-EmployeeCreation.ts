@@ -25,7 +25,8 @@ export default class EmployeeCreation1616865528066
           },
           {
             name: 'type_id',
-            type: 'varchar',
+            type: 'uuid',
+            isNullable: true,
           },
           {
             name: 'telephone',
@@ -41,7 +42,8 @@ export default class EmployeeCreation1616865528066
           },
           {
             name: 'shop_id',
-            type: 'varchar',
+            type: 'uuid',
+            isNullable: true,
           },
           {
             name: 'created_at',
@@ -63,7 +65,7 @@ export default class EmployeeCreation1616865528066
         name: 'FK_EmployeeType',
         columnNames: ['type_id'],
         referencedColumnNames: ['id'],
-        referencedTableName: 'employee_type',
+        referencedTableName: 'employees_types',
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
       }),
@@ -75,7 +77,7 @@ export default class EmployeeCreation1616865528066
         name: 'FK_EmployeeShop',
         columnNames: ['shop_id'],
         referencedColumnNames: ['id'],
-        referencedTableName: 'shop',
+        referencedTableName: 'shops',
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
       }),

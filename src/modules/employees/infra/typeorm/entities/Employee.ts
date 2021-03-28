@@ -1,9 +1,14 @@
+import Shop from '@modules/shops/infra/typeorm/entities/Shop';
+import EmployeeType from '@modules/employees_types/infra/typeorm/entities/EmployeeType';
 import {
   Column,
   Entity,
   Generated,
   PrimaryGeneratedColumn,
   CreateDateColumn,
+  OneToOne,
+  JoinColumn,
+  ManyToOne,
 } from 'typeorm';
 
 @Entity('employees')
@@ -14,8 +19,9 @@ class Employee {
   @Column()
   name: string;
 
-  @Column()
-  type_id: string;
+  @OneToOne(() => EmployeeType)
+  @JoinColumn({ name: 'type_id' })
+  type: EmployeeType;
 
   @Column()
   telephone: string;
@@ -26,8 +32,9 @@ class Employee {
   @Column()
   employment_date: Date;
 
-  @Column()
-  shop_id: string;
+  @ManyToOne(() => Shop)
+  @JoinColumn({ name: 'shop_id' })
+  shop: Shop;
 
   @CreateDateColumn()
   created_at: Date;
