@@ -4,7 +4,7 @@
   "port": 5432,
   "username": "postgres",
   "password": "docker",
-  "database": "gobarber",
+  "database": "number8",
   "entities": [
     "./src/modules/**/infra/typeorm/entities/*.ts"
   ],
